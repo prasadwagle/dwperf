@@ -13,6 +13,13 @@ Results (VERY PRELIMINARY)
 ==========================
 https://docs.google.com/a/yammer-inc.com/spreadsheet/ccc?key=0Aj1dTJ0aW5ETdDRiRXEwaU5JYmZ4RWxoSXlaWmhuTHc#gid=0
 
+Todo
+====
+1. Currently the data set is Yammer proprietary information. We need to figure out a way to obfuscate 
+sensitive fields so we can release the data set to the public domain.
+
+2. We need to add system details (configuration, optimizations) for every result.
+
 
 Queries and Output
 ==================
