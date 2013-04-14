@@ -7,4 +7,5 @@ CREATE TABLE event_properties
     occurred_at timestamp NOT NULL,
     property_name varchar(128),
     property_value varchar(512)
-);
+)
+PARTITION BY (date_trunc('day', event_properties.occurred_at));
