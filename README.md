@@ -28,6 +28,10 @@ sensitive fields so we can release the data set to the public domain.
 
 3. Explore reasonable optimization opportunities to improve benchmark performance.
 
+4. Add more complex analytics queries.
+
+5. Benchmark Hadoop and Cosmos.
+
 
 Queries and Output
 ==================
