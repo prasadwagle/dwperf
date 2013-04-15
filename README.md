@@ -1,7 +1,7 @@
-dwperf
-======
+dwperf: Data Warehouse Performance Benchmark
+============================================
 
-Recently there has been a spate of data warehouse solutions for Big Data analytics. However, there isn't a standard way
+Recently there has been a spate of data warehouse solutions for "Big Data" analytics. However, there isn't a standard way
 to compare these solutions using a realistic workload. This project is an attempt at creating a benchmark for 
 data warehouse query performance. We use queries and data that are used at Yammer.
 The data set size is around 10 TB and the largest table contains around 100 billion rows.
