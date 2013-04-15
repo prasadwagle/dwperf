@@ -1,16 +1,22 @@
 dwperf
 ======
 
-Benchmark for data warehouse query performance
+Recently there has been a spate of data warehouse solutions for Big Data analytics. However, there isn't a standard way
+to compare these solutions using a realistic workload. This project is an attempt at creating a benchmark for 
+data warehouse query performance. We use queries and data that are used at Yammer.
+The data set size is around 10 TB and the largest table contains around 100 billion rows.
 
+Benchmark Details
+=================
 The event_properties table has around 100 billion rows.
 The data set size is around 10 TB.
-
 event_properties is transformed to fact_events using load_fact_events.
 fact_events is joined with dimension tables in the rollup query.
 
 Results (VERY PRELIMINARY)
 ==========================
+These are VERY PRELIMINARY results since we haven't explored all the optimization strategies for some of the systems.
+
 https://docs.google.com/a/yammer-inc.com/spreadsheet/ccc?key=0Aj1dTJ0aW5ETdDRiRXEwaU5JYmZ4RWxoSXlaWmhuTHc#gid=0
 
 Todo
@@ -18,13 +24,20 @@ Todo
 1. Currently the data set is Yammer proprietary information. We need to figure out a way to obfuscate 
 sensitive fields so we can release the data set to the public domain.
 
-2. We need to add system details (configuration, optimizations) for every result.
+2. Add system details (hardware and software configuration, optimizations) for every result.
+
+3. Explore reasonable optimization opportunities to improve benchmark performance.
 
 
 Queries and Output
 ==================
 
 <pre>
+
+Command to load event_properties.2012-06-01-2012-06-02.gz which is around 25 GB and contains around 2 billion rows: 
+
+cat event_properties.2012-06-01-2012-06-02.gz | vsql -U yammer_rw -w yamittome -c "copy event_properties from stdin gzip direct delimiter E'\001' record terminator E'\002' no escape null 'NIL#'"
+
 
 dbadmin=> select count(1) from event_properties;
     count    
