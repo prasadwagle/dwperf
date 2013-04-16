@@ -13,9 +13,9 @@ The data set size is around 10 TB.
 event_properties is transformed to fact_events using load_fact_events.
 fact_events is joined with dimension tables in the rollup query.
 
-Results (VERY PRELIMINARY)
+Results (PRELIMINARY)
 ==========================
-These are VERY PRELIMINARY results since we haven't explored all the optimization strategies for some of the systems.
+These are PRELIMINARY results since we haven't explored all the optimization strategies for some of the systems.
 
 https://docs.google.com/a/yammer-inc.com/spreadsheet/ccc?key=0Aj1dTJ0aW5ETdDRiRXEwaU5JYmZ4RWxoSXlaWmhuTHc#gid=0
 
