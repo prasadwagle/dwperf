@@ -40,7 +40,7 @@ Queries and Output
 
 Command to load event_properties.2012-06-01-2012-06-02.gz which is around 25 GB and contains around 2 billion rows: 
 
-cat event_properties.2012-06-01-2012-06-02.gz | vsql -U yammer_rw -w yamittome -c "copy event_properties from stdin gzip direct delimiter E'\001' record terminator E'\002' no escape null 'NIL#'"
+cat event_properties.2012-06-01-2012-06-02.gz | vsql -c "copy event_properties from stdin gzip direct delimiter E'\001' record terminator E'\002' no escape null 'NIL#'"
 
 
 dbadmin=> select count(1) from event_properties;
